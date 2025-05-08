@@ -29,8 +29,8 @@
 #### Сборка
 
 ```bash
-git clone <repo>
-cd <repo>
+git clone https://github.com/pythshom2228/test-task.git
+cd test-task
 mkdir build
 cmake -B build
 cmake --build build
