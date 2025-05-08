@@ -28,6 +28,7 @@ void RMK::run(const ProductDatabase& db, CashierSession& session) {
 
         std::cout << "Создать новый чек? (да/нет): ";
         std::cin >> input;
+        std::cin.ignore();
 
         if (input == "да") {
             Receipt receipt;

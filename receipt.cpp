@@ -7,7 +7,7 @@
 void Receipt::generate(std::string& input, const ProductDatabase& db) {
     while (true) {
         std::cout << "Введите название или штрих-код товара (или 'конец'): ";
-        std::cin >> input;
+        std::getline(std::cin,input);
         if (input == "конец") break;
 
         const Product* p = nullptr;
@@ -27,6 +27,8 @@ void Receipt::generate(std::string& input, const ProductDatabase& db) {
         std::cout << "Введите количество: ";
         int quantity;
         std::cin >> quantity;
+        std::cin.ignore();
+
         if(std::cin.fail() || quantity < 1) {
             std::cout << "Некорректный ввод\n";
             std::cin.clear();
