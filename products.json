@@ -1,0 +1,12 @@
+[
+  { "name": "Хлеб", "barcode": 111, "price": 30.0 },
+  { "name": "Молоко", "barcode": 222, "price": 60.0 },
+  { "name": "Сыр", "barcode": 333, "price": 120.0 },
+  { "name": "Яйца", "barcode": 444, "price": 90.0 },
+  { "name": "Кефир", "barcode": 555, "price": 55.0 },
+  { "name": "Сахар", "barcode": 666, "price": 45.0 },
+  { "name": "Мука", "barcode": 777, "price": 40.0 },
+  { "name": "Масло сливочное", "barcode": 888, "price": 150.0 },
+  { "name": "Колбаса", "barcode": 999, "price": 200.0 },
+  { "name": "Чай", "barcode": 1001, "price": 85.0 }
+]
