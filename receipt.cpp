@@ -2,7 +2,6 @@
 #include "database.hpp"
 #include <iostream>
 #include <limits>
-#include <iomanip>
 
 void Receipt::generate(std::string& input, const ProductDatabase& db) {
     while (true) {
@@ -11,13 +10,17 @@ void Receipt::generate(std::string& input, const ProductDatabase& db) {
         if (input == "конец") break;
 
         const Product* p = nullptr;
-        try {
-            size_t barcode = std::stoull(input);
-            p = db.findByBarcode(barcode);
-        } catch (...) {
-            p = db.findByName(input);
+
+        int intInput = std::atoi(input.data());
+        if(intInput >= 0) {
+            size_t barcode = intInput;
+            if(barcode != 0) {
+                p = db.findByBarcode(barcode);
+            }
+            else {
+                p = db.findByName(input);
+            }
         }
-        
 
         if (!p) {
             std::cout << "Товар не найден\n";

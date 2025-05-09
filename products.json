@@ -1,6 +1,6 @@
 [
   { "name": "Хлеб", "barcode": 111, "price": 30.0 },
-  { "name": "Молоко", "barcode": 222, "price": 60.0 },
+  { "name": "Молоко", "barcode": -222, "price": 60.0 },
   { "name": "Сыр", "barcode": 333, "price": 120.0 },
   { "name": "Яйца", "barcode": 444, "price": 90.0 },
   { "name": "Кефир", "barcode": 555, "price": 55.0 },

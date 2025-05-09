@@ -9,10 +9,11 @@ void RMK::run(const ProductDatabase& db, CashierSession& session) {
         if (!session.isOpen) {
             std::cout << "Открыть смену? (да/нет): ";
             std::cin >> input; 
+            std::cin.ignore();
 
             if (input == "да")  {
             std::cout << "Введите имя кассира: ";
-            std::cin >> session.cashierName;
+            std::getline(std::cin, session.cashierName);
 
             RMK::handleCash(session);
             }

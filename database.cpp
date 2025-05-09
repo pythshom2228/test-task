@@ -39,6 +39,10 @@ bool ProductDatabase::loadFromFile(const std::string& filename) {
             std::cout << "Некорректная цена товара: " << name << "\n";
             continue;
         }        
+        if(item["barcode"] < 0) {
+            std::cout <<  "Некорректный штрихкод товара: " << name << "\n";
+            continue;
+        }
 
         nameIndex.emplace(
            name,
